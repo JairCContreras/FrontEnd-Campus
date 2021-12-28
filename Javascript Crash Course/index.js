@@ -97,3 +97,16 @@ names.map(name => console.log(name))
 console.log("filter")
 const filteredArray = names.filter(name => "Jair" == name.name);
 console.log(filteredArray)
+
+
+//////constructor function
+function Person(name, lastname){
+    this.name = name;
+    this.lastName = lastName;
+    this.getFullName = function() {
+        return this.name+" "+this.lastName;
+    }
+}
+
+const person1 = new Person("Jair", "Contreras");
+console.log(person1.getFullName())
