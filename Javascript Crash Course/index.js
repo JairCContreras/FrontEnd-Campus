@@ -100,6 +100,7 @@ console.log(filteredArray)
 
 
 //////constructor function
+/*
 function Person(name, lastname){
     this.name = name;
     this.lastName = lastName;
@@ -109,4 +110,24 @@ function Person(name, lastname){
 }
 
 const person1 = new Person("Jair", "Contreras");
+console.log(person1.getFullName())
+*/
+
+//OOP ES6
+
+class Person {
+    constructor(name, lastName){
+        this.name = name;
+        this.lastName = lastName
+    }
+
+    getFullName(){
+        return this.name + " "+ this.lastName;
+    }
+}
+
+const person1 = new Person("Jair", "Contreras");
+console.log(person1)
+
+
 console.log(person1.getFullName())
