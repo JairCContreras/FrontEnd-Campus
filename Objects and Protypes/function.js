@@ -1,16 +1,16 @@
 function foo() {
-    console.log("Hello")
+    console.log(this);
+    //refer to window
 }
 
 var obj = {
     elem: function() {
-        console.log('hello')
+        console.log(this)
+        //refer to object
     }
 }
 
-foo();          //method 1  global object
-obj.elem();     //method 2  
+foo();          
+obj.elem();
 
-new foo();      //method 3
-
-                //method 4
+new foo();  //refer to foo object
