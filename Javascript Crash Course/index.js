@@ -17,7 +17,7 @@ console.log(typeof indefinido);
 
 //arrays
 const fruits = ["Apple", "Banana", "Pineapple"];
-const array = new Array (1,3,44,2,1,4);
+const array = new Array(1, 3, 44, 2, 1, 4);
 console.log(fruits);
 console.log(array);
 
@@ -34,3 +34,9 @@ const person = {
         state: 'MA'
     }
 }
+
+
+//destructuring 
+
+const { firstName, lastName, address: { street } } = person;
+console.log(firstName, lastName, street)
