@@ -37,6 +37,23 @@ const person = {
 
 
 //destructuring 
-
 const { firstName, lastName, address: { street } } = person;
 console.log(firstName, lastName, street)
+
+
+
+//array of objects
+
+const names = [
+    {name: 'Jair', lastName: 'Contreras'},
+    {name: 'Alejandro', lastName: 'Lopez'}, 
+    {name: 'Alejandro', lastName: 'Lopez'}, 
+    {name: 'Alejandro', lastName: 'Lopez'}, 
+    {name: 'Alejandro', lastName: 'Lopez'}, 
+    {name: 'Alejandro', lastName: 'Lopez'}, 
+]
+
+
+const namesJson = JSON.stringify(names);
+//json!
+
