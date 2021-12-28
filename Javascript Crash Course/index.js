@@ -16,11 +16,9 @@ console.log(typeof indefinido);
 
 
 
-
-
-
-const fruits = ["Apples", "Bananas", "Pears", "Pineapple"]
-
-console.log(s.substring(0,4))
-
+const fruits = ["Apple", "Banana", "Pineapple"];
+const array = new Array (1,3,44,2,1,4);
 console.log(fruits);
+console.log(array);
+
+
