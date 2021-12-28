@@ -53,7 +53,47 @@ const names = [
     {name: 'Alejandro', lastName: 'Lopez'}, 
 ]
 
-
-const namesJson = JSON.stringify(names);
 //json!
 
+
+
+const namesJson = JSON.stringify(names);
+
+
+
+//cicles 
+////for
+for(let i = 0; i < 10; i++){
+    console.log(i)
+}
+
+////while
+let i = 0;
+while( i < 10){
+    console.log(i);
+    i++;
+}
+
+ i = 0;
+do{
+    console.log(i);
+    i++;
+
+}while(i < 10);
+
+
+//foreach, map, filter
+
+
+//foreach
+console.log("foreach")
+names.forEach(name => console.log(name))
+
+//map
+console.log("map");
+names.map(name => console.log(name))
+
+//filter
+console.log("filter")
+const filteredArray = names.filter(name => "Jair" == name.name);
+console.log(filteredArray)
