@@ -1,2 +1,2 @@
 # Frontend-Upgrade
-Assigments, projects, courses and documention about frontend upgrade in Atos. 
+Assigments, projects, courses and documention related to frontend upgrade in Atos. 
