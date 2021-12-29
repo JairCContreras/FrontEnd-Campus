@@ -35,4 +35,29 @@ document.getElementById('button').addEventListener('click', ()=>{
     }
     //send request
     xhr.send();
+});
+
+
+
+
+document.getElementById('buttonUsers').addEventListener('click', ()=>{
+    console.log('clicked')
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET', 'http://api.github.com/users', true);
+    xhr.onload = function() {
+        if(this.status === 200) {
+            var users = JSON.parse(this.responseText);
+            var output = '';
+            users.map(user => { output +=`<div class="user">
+                <img src=${user.avatar_url} width="70" heigth="70"/>
+                <ul>
+                    <li>${user.id}</li>
+                    <li>${user.login}</li>
+                </ul>
+            </div>
+            `});
+            document.getElementById('users').innerHTML = output;
+        }
+    }
+    xhr.send();
 })
