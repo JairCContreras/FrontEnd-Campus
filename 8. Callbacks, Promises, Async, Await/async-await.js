@@ -5,6 +5,22 @@ const posts = [
 ]
 
 
+
+function createPost(post) {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            posts.push(post);
+            const error = false;
+            if (!error) {
+                resolve()
+            } else {
+                reject('Something went wrong')
+            }
+        }, 2000);
+    });
+}
+
+
 function getPost() {
     setTimeout(() => {
         let output = '';
@@ -17,29 +33,13 @@ function getPost() {
 }
 
 
-function createPost(post) {
-    return new Promise((resolve, reject) => {
-        setTimeout(() => {
-            posts.push(post);
-            const error = true;
-            if (!error) {
-                resolve()
-            } else {
-                reject('Something went wrong')
-            }
-        }, 2000);
-    });
+
+
+async function init() {
+    await createPost({title: 'Post four', body: 'This is post four'})
+    getPost();
 }
 
 
-
 getPost();
-
-
-createPost({ title: 'Post four', body: 'This is post three' })
-    .then( getPost)
-    .catch(e => console.log(e))
-
-
-    //Promise.all([array of promises])
-    //.then (callback)  //
+init();
