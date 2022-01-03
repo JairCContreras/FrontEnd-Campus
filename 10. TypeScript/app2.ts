@@ -2,6 +2,7 @@
 type Combinable = number | string;
 
 //unions
+/*
 function combine (
     input1: Combinable, 
     input2: Combinable, 
@@ -24,3 +25,17 @@ const r3 = combine("Jair", 5, 'text');
 
 console.log(r1)
 console.log(r2);
+*/
+
+//return types
+
+
+//typescript infer the type
+
+function add(n1: number, n2: number): number{
+    return n1 + n2;
+}
+
+function printResult(num: number): void{
+    console.log("The result: "+num);
+}
