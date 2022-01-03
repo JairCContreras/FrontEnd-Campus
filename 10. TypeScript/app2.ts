@@ -1,7 +1,10 @@
+//types
+type Combinable = number | string;
+
 //unions
 function combine (
-    input1: number | string, 
-    input2: number | string, 
+    input1: Combinable, 
+    input2: Combinable, 
     resultType: 'number' | 'text') {
     let result;
     if (typeof input2 === 'number' && typeof input1 === 'number' || resultType == 'number'){
