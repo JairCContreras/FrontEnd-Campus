@@ -1,3 +1,4 @@
+"use strict";
 //1. Working with Types
 //Core syntax and features
 //number [1, 4.5, -10]
@@ -22,7 +23,6 @@ const resultPhrase = 'The result is: '
 
 add(n1, n2, printResult, resultPhrase);
 */
-
 /////////////////////////////////////////////////
 /// Objects types
 /*
@@ -55,10 +55,9 @@ let favoriteActivities: string[];
 
 for(let hobby of person.hobbies ){
     console.log(hobby.toUpperCase())
-    //hobby.map() 
+    //hobby.map()
 }
 */
-
 /////////////////////////////////////////////////
 /// Tuple
 /*
@@ -68,7 +67,7 @@ const person : {
     role: [number, string]
 }= {
     name: 'Jair',
-    age: 25, 
+    age: 25,
     role: [2,'author']
 }
 
@@ -78,14 +77,17 @@ person.role = [0, 'painter'];
 
 console.log(person);
 */
-
 //////////////////////////////////////////////
 /// Enum
-
-enum Role {ADMIN, READ_ONLY, AUTHOR}
-
+var Role;
+(function (Role) {
+    Role[Role["ADMIN"] = 0] = "ADMIN";
+    Role[Role["READ_ONLY"] = 1] = "READ_ONLY";
+    Role[Role["AUTHOR"] = 2] = "AUTHOR";
+})(Role || (Role = {}));
 const person = {
     name: 'Maxi',
     age: 30,
     role: Role.ADMIN
-}
+};
+console.log("hello");

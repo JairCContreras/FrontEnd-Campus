@@ -12,6 +12,6 @@ function generateError(message: string, code: number) /*never*/{
 
 
 
-
+console.log("change")
 
 generateError('An error occureted', 404);
